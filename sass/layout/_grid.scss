@@ -2,8 +2,14 @@
   max-width: $grid-width;
   margin: 0 auto;
 
+
   &:not(:last-child) {
     margin-bottom: $gutter-ver;
+  }
+  
+  @include respond(tab-port) {
+    max-width:50rem;
+    padding: 0 5rem;
   }
 
   @include clearfix;
@@ -13,6 +19,17 @@
     &:not(:last-child) {
       margin-right: $gutter-her;
     }
+    
+    @include respond(tab-port) {
+      width: 100% !important;
+      margin-right: 0;
+      
+      &:not(:last-child) {
+        margin-bottom: $gutter-ver-small;
+      }
+      
+    }
+    
   }
 
   .col-1-of-2 {
