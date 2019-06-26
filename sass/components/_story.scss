@@ -17,6 +17,8 @@
   
   @include respond(phone) {
     transform: skewX(0);
+    text-align: center;
+    padding: 4rem;
   }
 
   &__shape {
@@ -26,13 +28,15 @@
     -webkit-shape-outside: circle(50% at 50% 50%);
     shape-outside: circle(50% at 50% 50%);
     -webkit-clip-path: circle(50% at 50% 50%);
-
     clip-path: circle(50% at 50% 50%);
     transform: translateX(-3rem) skewX(12deg);
     position: relative;
+    margin: 0 auto;
 
     @include respond(phone) {
-      transform: translateX(-3rem) skewX(0);
+      transform: translateX(0rem) skewX(0);
+      float: none;
+      margin-bottom: 3rem;
     }
   }
 
