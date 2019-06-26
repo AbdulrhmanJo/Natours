@@ -64,7 +64,7 @@ html {
     animation-duration: 1.5s; }
     @media (max-width: 37.5em) {
       .primary-heading--main {
-        font-size: 5rem;
+        font-size: 4rem;
         letter-spacing: 1.5rem; } }
   .primary-heading--sub {
     display: block;
@@ -74,7 +74,6 @@ html {
     animation: moveInRight 1.5s; }
     @media (max-width: 37.5em) {
       .primary-heading--sub {
-        font-size: 1.5rem;
         letter-spacing: 0.5rem; } }
 
 body {
@@ -427,7 +426,9 @@ body {
     width: 15rem;
     height: 15rem;
     float: left;
+    -webkit-shape-outside: circle(50% at 50% 50%);
     shape-outside: circle(50% at 50% 50%);
+    -webkit-clip-path: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
     transform: translateX(-3rem) skewX(12deg);
     position: relative; }
@@ -557,10 +558,12 @@ body {
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.9), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
   background-size: cover;
   background-position: top;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
   position: relative; }
   @media (max-width: 75em) {
     .header {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
       clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%); } }
   @media (max-width: 37.5em) {
     .header {
