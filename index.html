@@ -16,26 +16,26 @@
 <body>
     <div class="navigation">
         <input type=checkbox class="navigation__checkbox" id="navi-toggle">
-        
+
         <label for="navi-toggle" class="navigation__button">
             <span class="navigation__icon">&nbsp;</span>
         </label>
-        
+
         <div class="navigation__background">&nbsp;</div>
-        
+
         <nav class="navigation__nav">
             <ul class="navigation__list">
                 <li class="navigation__item"><a href="#" class="navigation__link"><span>01</span>Natours</a></li>
-                <li class="navigation__item"><a href="#" class="navigation__link"><span>02</span>Your benfits</a></li>                
-                <li class="navigation__item"><a href="#" class="navigation__link"><span>03</span>Popular tours</a></li>                
-                <li class="navigation__item"><a href="#" class="navigation__link"><span>04</span>Stories</a></li>                
-                <li class="navigation__item"><a href="#" class="navigation__link"><span>05</span>Book now</a></li>               
+                <li class="navigation__item"><a href="#" class="navigation__link"><span>02</span>Your benfits</a></li>
+                <li class="navigation__item"><a href="#" class="navigation__link"><span>03</span>Popular tours</a></li>
+                <li class="navigation__item"><a href="#" class="navigation__link"><span>04</span>Stories</a></li>
+                <li class="navigation__item"><a href="#" class="navigation__link"><span>05</span>Book now</a></li>
             </ul>
         </nav>
-        
+
     </div>
-    
-    
+
+
     <header class="header">
         <div class="header__logo-box">
             <img src="img/logo-white.png" alt="logo" class="header__logo">
@@ -76,9 +76,17 @@
 
                 <div class="col-1-of-2">
                     <div class="composition">
-                        <img src="img/nat-1-large.jpg" alt="photo-1" class="composition__photo composition__photo--p1">
-                        <img src="img/nat-2-large.jpg" alt="photo-2" class="composition__photo composition__photo--p2">
-                        <img src="img/nat-3-large.jpg" alt="photo-3" class="composition__photo composition__photo--p3">
+                        <img srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w"
+                            sizes="(max-width:56.25em) 20vw, (max-width:37.5em) 30vw, 300px" alt="photo-1"
+                            class="composition__photo composition__photo--p1" src="img/nat-1-large.jpg">
+
+                        <img srcset="img/nat-2.jpg 300w, img/nat-2-large.jpg 1000w"
+                            sizes="(max-width:56.25em) 20vw, (max-width:37.5em) 30vw, 300px" alt="photo-2"
+                            class="composition__photo composition__photo--p2" src="img/nat-2-large.jpg">
+
+                        <img srcset="img/nat-3.jpg 300w, img/nat-3-large.jpg 1000w"
+                            sizes="(max-width:56.25em) 20vw, (max-width:37.5em) 30vw, 300px" alt="photo-3"
+                            class="composition__photo composition__photo--p3" src="img/nat-3-large.jpg">
                     </div>
                 </div>
             </div>
@@ -333,7 +341,12 @@
     </main>
     <footer class="footer">
         <div class="footer__logo-box">
-            <img src="img/logo-green-2x.png" alt="full logo" class="footer__logo">
+            <picture class="footer__logo">
+                <source srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x"
+                    media="(max-width: 37.5em)">
+                <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" alt="full logo"
+                    src="img/logo-green-2x.png">
+            </picture>
         </div>
         <div class="row">
             <div class="col-1-of-2">
@@ -356,7 +369,7 @@
             </div>
         </div>
     </footer>
-    
+
     <div class="popup" id="popup">
         <div class="popup__content">
             <div class="popup__left">
@@ -366,9 +379,14 @@
             <div class="popup__right">
                 <a href="#tours-section" class="popup__close">&times;</a>
                 <h2 class="secondary-heading u-maring-bottom-small">Start booking now</h2>
-                <h2 class="tertiany-heading u-maring-bottom-small">Important &ndash; Please read these terms before booking</h2>
+                <h2 class="tertiany-heading u-maring-bottom-small">Important &ndash; Please read these terms before
+                    booking</h2>
                 <p class="popup__text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni sapiente illum natus odio doloribus tempora facilis repudiandae incidunt, mollitia sit maiores obcaecati autem temporibus ea asperiores nisi alias accusantium fuga. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam ratione culpa nostrum maiores error iusto consequatur assumenda nesciunt, nam placeat dolorem! Velit adipisci nobis odio voluptate? Iure, delectus asperiores? Sed?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni sapiente illum natus odio doloribus
+                    tempora facilis repudiandae incidunt, mollitia sit maiores obcaecati autem temporibus ea asperiores
+                    nisi alias accusantium fuga. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+                    ratione culpa nostrum maiores error iusto consequatur assumenda nesciunt, nam placeat dolorem! Velit
+                    adipisci nobis odio voluptate? Iure, delectus asperiores? Sed?
                 </p>
                 <a href="#" class="btn btn--green">book now</a>
             </div>
